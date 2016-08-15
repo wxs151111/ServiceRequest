@@ -7,11 +7,11 @@ h1 {
 
 <template>
 <h1  style="padding:1ex 0">
-Service Request
+ITSM System
 </h1>
 <div class="row"  style="padding:2ex 0">
 <div class='col-xs-4'>
-   Title:
+   Username:
 </div>
 <div class='col-xs-8'>
 <input type="text"></input>
@@ -19,7 +19,7 @@ Service Request
 </div>
 <div class="row"  style="padding:2ex 0">
 <div class='col-xs-4'>
-Description:
+Password:
 </div>
 
 <div class='col-xs-8'>
@@ -27,19 +27,21 @@ Description:
   </div>
 </div>
 <div style="padding:2ex 0">
-  <button class='btn btn-block' style='background-color: #42b983;color:#FFF' @click='submit'>submit</button>
+  <button class='btn btn-block' style='background-color: #42b983;color:#FFF' @click='rexlogin'>login</button>
 </div>
 </template>
 
 <script>
-import { submit } from '../Vuex/actions'
+import { rexlogin } from '../Vuex/actions'
+import { getStatus } from '../Vuex/getters'
 export default {
   vuex: {
     actions: {
-      submit
+      rexlogin
+    },
+    getters: {
+      getStatus
     }
   }
 }
 </script>
-
-

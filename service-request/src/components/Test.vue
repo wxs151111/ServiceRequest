@@ -11,9 +11,7 @@ h1 {
   </div>
   <button class=""@click="message">save</button>
 </template>
-
 <script>
-import SOAPClientParameters from '../soapclient.js'
 export default {
   data () {
     return {
@@ -26,14 +24,8 @@ export default {
   },
   methods: {
     message: function () {
-      // this.msg = this.msg.split('').reverse().join('')
-      var param = new SOAPClientParameters();  
-      param.add('name',this.msg);  
-      var result = SOAPClient.invoke("http://isupport.cuhk.edu.cn:8080/arsys/services/ARService?server=itsm-app&webService=HPD_HelpDesk_WebService", "New_Create_Operation_0", param, false);  
-      return result;  
+      this.msg = this.msg.split('').reverse().join('')
     }
   }
 }
 </script>
-
-
